@@ -1,0 +1,90 @@
+import Link from "next/link";
+
+export default function HeroSection() {
+  return (
+    <section
+      className="relative"
+      style={{
+        backgroundImage: "url('/images/hero-bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/75" />
+
+      {/* Content Wrapper */}
+      <div className="relative z-10">
+
+        {/* HERO */}
+        <div className="min-h-[85vh] flex items-center justify-center text-center px-6">
+          <div className="max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+              Strategic Legal Solutions
+              <br />
+              <span className="text-[var(--gold)]">
+                N3&amp;M Imperium Chambers
+              </span>
+            </h1>
+
+            <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed">
+              N3&amp;M Imperium Chambers is a forward-thinking law firm based in
+              Delhi, offering strategic and result-oriented legal representation
+              across India in arbitration, commercial, corporate, and criminal matters.
+            </p>
+
+            <div className="mt-8 flex justify-center gap-4">
+              <Link
+                href="/contact"
+                className="px-6 py-3 border border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-black transition text-sm"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* SERVICE INTRO CARDS */}
+        <div className="pb-24">
+          <div className="max-w-7xl mx-auto px-6 grid gap-8 md:grid-cols-3">
+            
+            <div className="bg-white/10 backdrop-blur-md p-8 min-h-[220px] border border-white/15">
+              <h3 className="text-xl font-medium text-white">
+                Arbitration & Dispute Resolution
+              </h3>
+              <p className="mt-4 text-base text-gray-300 leading-relaxed">
+                Representation in domestic and international commercial arbitration,
+                including enforcement and challenge of arbitral awards before
+                appropriate judicial forums.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md p-8 min-h-[220px] border border-white/15">
+              <h3 className="text-xl font-medium text-white">
+                Corporate & Commercial Advisory
+              </h3>
+              <p className="mt-4 text-base text-gray-300 leading-relaxed">
+                Comprehensive legal advisory for businesses, covering corporate
+                structuring, commercial contracts, regulatory compliance,
+                and transactional matters.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md p-8 min-h-[220px] border border-white/15">
+              <h3 className="text-xl font-medium text-white">
+                Criminal & Litigation Practice
+              </h3>
+              <p className="mt-4 text-base text-gray-300 leading-relaxed">
+                Strategic representation in criminal matters, bail applications,
+                white-collar offences, and civil litigation before the Supreme Court,
+                High Courts, and subordinate courts.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
