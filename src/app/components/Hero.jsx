@@ -5,7 +5,7 @@ export default function HeroSection() {
     <section
       className="relative"
       style={{
-        backgroundImage: "url('/images/hero-bg.jpg')",
+        backgroundImage: "url('/bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
