@@ -3,19 +3,25 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section className="bg-black py-28">
+    <section
+      className="bg-black py-28"
+      aria-labelledby="about-heading"
+    >
       <div className="max-w-7xl mx-auto px-6 grid gap-16 md:grid-cols-2 items-center">
         
         {/* LEFT: TEXT */}
-        <div>
-          <h2 className="text-3xl md:text-4xl font-semibold leading-tight text-white">
+        <article>
+          <h2
+            id="about-heading"
+            className="text-3xl md:text-4xl font-semibold leading-tight text-white"
+          >
             About
             <span className="text-[var(--gold)]">
               {" "}N3&amp;M Imperium Chambers
             </span>
           </h2>
 
-          <p className="mt-8 text-base md:text-lg text-white leading-relaxed">
+          <p className="mt-8 text-base md:text-lg text-gray-200 leading-relaxed">
             <strong>N3&amp;M Imperium Chambers</strong> is a forward-thinking law firm
             based in <strong>Delhi</strong>, providing
             <strong> strategic and result-oriented legal solutions</strong> across
@@ -25,7 +31,7 @@ export default function AboutSection() {
             <strong> criminal and civil litigation</strong>.
           </p>
 
-          <p className="mt-6 text-base md:text-lg text-white leading-relaxed">
+          <p className="mt-6 text-base md:text-lg text-gray-200 leading-relaxed">
             We combine <strong>deep legal expertise</strong> with
             <strong> practical commercial insight</strong>, enabling us to deliver
             solutions that are not only <strong>legally sound</strong> but also
@@ -36,7 +42,7 @@ export default function AboutSection() {
             <strong> subordinate courts</strong>.
           </p>
 
-          <p className="mt-6 text-base md:text-lg text-white leading-relaxed">
+          <p className="mt-6 text-base md:text-lg text-gray-200 leading-relaxed">
             Every matter entrusted to us is handled with
             <strong> meticulous preparation</strong>,
             <strong> strategic clarity</strong>, and
@@ -47,21 +53,26 @@ export default function AboutSection() {
           <div className="mt-10">
             <Link
               href="/about"
-              className="inline-block px-7 py-3 border border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-black transition text-sm tracking-wide"
+              className="inline-block px-7 py-3 border border-[var(--gold)] text-[var(--gold)]
+                         hover:bg-[var(--gold)] hover:text-black transition
+                         text-sm tracking-wide"
             >
               Read More
             </Link>
           </div>
-        </div>
+        </article>
 
         {/* RIGHT: IMAGE */}
-        <div className="relative w-full h-[440px]">
+        <div className="relative w-full h-[440px] rounded-lg overflow-hidden">
           <Image
             src="/images/about.jpg"
-            alt="N3&M Imperium Chambers legal practice"
+            alt="N3&M Imperium Chambers legal practice in Delhi"
             fill
+            priority={false}
             className="object-cover"
           />
+          {/* subtle overlay for premium look */}
+          <div className="absolute inset-0 bg-black/10" />
         </div>
 
       </div>
