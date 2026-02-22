@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Apex Juris Chambers | Legal Excellence",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );

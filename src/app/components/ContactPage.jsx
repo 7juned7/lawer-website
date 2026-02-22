@@ -139,12 +139,7 @@ export default function ContactPage() {
 
         </div>
 
-        {/* Optional Map Placeholder */}
-        <div className="mt-24">
-          <div className="h-[360px] bg-black/5 flex items-center justify-center text-gray-500 text-sm">
-            Google Map – Saket Court Complex, New Delhi
-          </div>
-        </div>
+      
 
       </div>
     </section>

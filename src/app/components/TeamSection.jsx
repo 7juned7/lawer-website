@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function TeamSection() {
   const sliderRef = useRef(null);
@@ -15,14 +16,51 @@ export default function TeamSection() {
   };
 
   const teamMembers = [
-    { name: "Adv. Nazma Khan", role: "Founder" },
-    { name: "Adv. Nadeem Khan", role: "Founder" },
-    { name: "Adv. Muskan Ali", role: "Co-Founder" },
-    { name: "Adv. Neerav Anand", role: "Co-Founder" },
-    { name: "Adv. Naaz", role: "Senior Associate" },
-    { name: "Adv. Faisal", role: "Associate" },
-    { name: "Md. Faizan", role: "Legal Associate" },
-    { name: "Md. Iqbal", role: "Legal Associate" },
+    {
+      name: "Adv. Nazma Khan",
+      role: "Founder",
+      image: "/team/Nazma.jpeg",
+    },
+    {
+      name: "Adv. Nadeem Khan",
+      role: "Founder",
+      image: "/team/Nadeem.jpeg",
+    },
+    {
+      name: "Adv. Neerav Anand",
+      role: "Co-Founder",
+      image: "/team/neerav.jpeg",
+    },
+    {
+      name: "Adv. Muskan Ali",
+      role: "Co-Founder",
+      image: "/team/muskaan.jpeg",
+    },
+    {
+      name: "Adv. Naaz",
+      role: "Senior Associate",
+      image: "/team/naaz.jpg",
+    },
+    {
+      name: "Adv. Faisal Yaseen",
+      role: "Senior Associate",
+      image: "/team/Adv Faisal.jpeg",
+    },
+    {
+      name: "Adv. Deepak",
+      role: "Senior Associate",
+      image: "/team/deepak.jpg",
+    },
+    {
+      name: "Md. Faizan",
+      role: "Legal Associate",
+      image: "/team/Faizan.jpeg",
+    },
+    {
+      name: "Md. Iqbal",
+      role: "Legal Associate",
+      image: "/team/iqbal.jpeg",
+    },
   ];
 
   return (
@@ -31,7 +69,10 @@ export default function TeamSection() {
 
         {/* Heading */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 id="team-heading" className="text-3xl md:text-4xl font-semibold text-white">
+          <h2
+            id="team-heading"
+            className="text-3xl md:text-4xl font-semibold text-white"
+          >
             Our <span className="text-[var(--gold)]">Team</span>
           </h2>
 
@@ -50,14 +91,24 @@ export default function TeamSection() {
           {teamMembers.map((member, index) => (
             <article
               key={index}
-              className="min-w-[260px] sm:min-w-[280px] md:min-w-[320px] snap-start border border-white/15 rounded-xl bg-black"
+              className="min-w-[260px] sm:min-w-[280px] md:min-w-[320px]
+                         snap-start border border-white/15 rounded-xl bg-black overflow-hidden"
             >
-              <div className="h-[280px] bg-neutral-900 flex items-center justify-center">
-                <span className="text-gray-500 text-sm">Photograph</span>
+              {/* PHOTO */}
+              <div className="relative h-[320px] bg-neutral-900">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
 
+              {/* INFO */}
               <div className="p-6 text-center">
-                <h3 className="text-lg font-semibold text-white">{member.name}</h3>
+                <h3 className="text-lg font-semibold text-white">
+                  {member.name}
+                </h3>
                 <p className="mt-2 text-sm text-[var(--gold)] tracking-wide">
                   {member.role}
                 </p>
@@ -71,7 +122,9 @@ export default function TeamSection() {
           <button
             onClick={() => scroll("left")}
             aria-label="Scroll team left"
-            className="w-10 h-10 flex items-center justify-center border border-white/25 rounded-full text-white hover:border-[var(--gold)] transition"
+            className="w-10 h-10 flex items-center justify-center
+                       border border-white/25 rounded-full text-white
+                       hover:border-[var(--gold)] transition"
           >
             ←
           </button>
@@ -79,7 +132,9 @@ export default function TeamSection() {
           <button
             onClick={() => scroll("right")}
             aria-label="Scroll team right"
-            className="w-10 h-10 flex items-center justify-center border border-white/25 rounded-full text-white hover:border-[var(--gold)] transition"
+            className="w-10 h-10 flex items-center justify-center
+                       border border-white/25 rounded-full text-white
+                       hover:border-[var(--gold)] transition"
           >
             →
           </button>
