@@ -43,7 +43,7 @@ export default function AboutPage() {
 
           <div className="relative w-full h-[420px] rounded-lg overflow-hidden">
             <Image
-              src="/images/about-full.jpg"
+              src="/Team/team.jpeg"
               alt="N3&M Imperium Chambers office at Saket Court"
               fill
               className="object-cover"

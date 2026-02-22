@@ -19,47 +19,47 @@ export default function TeamSection() {
     {
       name: "Adv. Nazma Khan",
       role: "Founder",
-      image: "/team/Nazma.jpeg",
+      image: "/Team/Nazma.jpeg",
     },
     {
       name: "Adv. Nadeem Khan",
       role: "Founder",
-      image: "/team/Nadeem.jpeg",
+      image: "/Team/Nadeem.jpeg",
     },
     {
       name: "Adv. Neerav Anand",
       role: "Co-Founder",
-      image: "/team/neerav.jpeg",
+      image: "/Team/neerav.jpeg",
     },
     {
       name: "Adv. Muskan Ali",
       role: "Co-Founder",
-      image: "/team/muskaan.jpeg",
+      image: "/Team/muskaan.jpeg",
     },
     {
       name: "Adv. Naaz",
       role: "Senior Associate",
-      image: "/team/naaz.jpg",
+      image: "/Team/naaz.jpg",
     },
     {
       name: "Adv. Faisal Yaseen",
       role: "Senior Associate",
-      image: "/team/Adv Faisal.jpeg",
+      image: "/Team/Adv Faisal.jpeg",
     },
     {
       name: "Adv. Deepak",
       role: "Senior Associate",
-      image: "/team/deepak.jpg",
+      image: "/Team/deepak.jpg",
     },
     {
       name: "Md. Faizan",
       role: "Legal Associate",
-      image: "/team/Faizan.jpeg",
+      image: "/Team/Faizan.jpeg",
     },
     {
       name: "Md. Iqbal",
       role: "Legal Associate",
-      image: "/team/iqbal.jpeg",
+      image: "/Team/iqbal.jpeg",
     },
   ];
 
