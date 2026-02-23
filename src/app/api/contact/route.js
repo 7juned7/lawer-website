@@ -30,7 +30,12 @@ export async function POST(req) {
       .setFrom(sentFrom)
       .setTo(recipients)
       .setSubject("Test Inquiry – N3&M Imperium Chambers")
-      .setReplyTo(email) // ✅ ONLY email (no name)
+      .setReplyTo([
+  {
+    email: email,
+    name: name,
+  },
+]) // ✅ ONLY email (no name)
       .setText(`
 New inquiry received via website:
 
