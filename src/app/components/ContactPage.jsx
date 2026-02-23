@@ -59,7 +59,7 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="bg-gray-100 py-28" aria-labelledby="contact-heading">
+    <section className=" text-black bg-gray-100 py-28" aria-labelledby="contact-heading">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
