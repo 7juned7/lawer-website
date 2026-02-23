@@ -13,10 +13,10 @@ export default function Navbar() {
       {/* Top Call Bar */}
       <div className="bg-black py-2 text-center text-xs sm:text-sm">
         <a
-          href="tel:+919999999999"
+          href="tel:+917827795690"
           className="text-[var(--gold)] tracking-wide hover:underline"
         >
-          Call for Consultation: +91 99999 99999
+          Call for Consultation: +91 78277 95690
         </a>
       </div>
 

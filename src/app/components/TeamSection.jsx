@@ -16,74 +16,33 @@ export default function TeamSection() {
   };
 
   const teamMembers = [
-    {
-      name: "Adv. Nazma Khan",
-      role: "Founder",
-      image: "/Team/Nazma.jpeg",
-    },
-    {
-      name: "Adv. Nadeem Khan",
-      role: "Founder",
-      image: "/Team/Nadeem.jpeg",
-    },
-    {
-      name: "Adv. Neerav Anand",
-      role: "Co-Founder",
-      image: "/Team/neerav.jpeg",
-    },
-    {
-      name: "Adv. Muskan Ali",
-      role: "Co-Founder",
-      image: "/Team/muskaan.jpeg",
-    },
-    {
-      name: "Adv. Naaz",
-      role: "Senior Associate",
-      image: "/Team/naaz.jpg",
-    },
-    {
-      name: "Adv. Faisal Yaseen",
-      role: "Senior Associate",
-      image: "/Team/Adv Faisal.jpeg",
-    },
-    {
-      name: "Adv. Deepak",
-      role: "Senior Associate",
-      image: "/Team/deepak.jpg",
-    },
-    {
-      name: "Md. Faizan",
-      role: "Legal Associate",
-      image: "/Team/Faizan.jpeg",
-    },
-    {
-      name: "Md. Iqbal",
-      role: "Legal Associate",
-      image: "/Team/iqbal.jpeg",
-    },
+    { name: "Adv. Nazma Khan", role: "Founder", image: "/team/nazma.jpeg" },
+    { name: "Adv. Nadeem Khan", role: "Founder", image: "/team/nadeem.jpeg" },
+    { name: "Adv. Neerav Anand", role: "Co-Founder", image: "/team/neerav.jpeg" },
+    { name: "Adv. Muskan Ali", role: "Co-Founder", image: "/team/muskaan.jpeg" },
+    { name: "Adv. Naaz", role: "Senior Associate", image: "/team/nazma.jpeg" },
+    { name: "Adv. Faisal Yaseen", role: "Senior Associate", image: "/team/adv-faisal.jpeg" },
+    { name: "Adv. Deepak", role: "Senior Associate", image: "/team/deepak.jpg" },
+    { name: "Md. Faizan", role: "Legal Associate", image: "/team/faizan.jpeg" },
+    { name: "Md. Iqbal", role: "Legal Associate", image: "/team/iqbal.jpeg" },
   ];
 
   return (
     <section className="bg-black py-28" aria-labelledby="team-heading">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Heading */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2
-            id="team-heading"
-            className="text-3xl md:text-4xl font-semibold text-white"
-          >
+          <h2 id="team-heading" className="text-3xl md:text-4xl font-semibold text-white">
             Our <span className="text-[var(--gold)]">Team</span>
           </h2>
 
           <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed">
-            Our team comprises advocates and legal professionals with
-            <strong> focused expertise</strong> and a commitment to
-            <strong> ethical legal practice</strong>.
+            Our team comprises advocates and legal professionals with{" "}
+            <strong>focused expertise</strong> and a commitment to{" "}
+            <strong>ethical legal practice</strong>.
           </p>
         </div>
 
-        {/* Carousel */}
         <div
           ref={sliderRef}
           className="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide pb-6"
@@ -91,24 +50,20 @@ export default function TeamSection() {
           {teamMembers.map((member, index) => (
             <article
               key={index}
-              className="min-w-[260px] sm:min-w-[280px] md:min-w-[320px]
-                         snap-start border border-white/15 rounded-xl bg-black overflow-hidden"
+              className="min-w-[260px] sm:min-w-[280px] md:min-w-[320px] snap-start border border-white/15 rounded-xl bg-black overflow-hidden"
             >
-              {/* PHOTO */}
               <div className="relative h-[320px] bg-neutral-900">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, 320px"
                   className="object-cover"
                 />
               </div>
 
-              {/* INFO */}
               <div className="p-6 text-center">
-                <h3 className="text-lg font-semibold text-white">
-                  {member.name}
-                </h3>
+                <h3 className="text-lg font-semibold text-white">{member.name}</h3>
                 <p className="mt-2 text-sm text-[var(--gold)] tracking-wide">
                   {member.role}
                 </p>
@@ -117,26 +72,21 @@ export default function TeamSection() {
           ))}
         </div>
 
-        {/* Controls */}
         <div className="flex justify-center gap-6 mt-6">
           <button
             onClick={() => scroll("left")}
             aria-label="Scroll team left"
-            className="w-10 h-10 flex items-center justify-center
-                       border border-white/25 rounded-full text-white
-                       hover:border-[var(--gold)] transition"
+            className="w-10 h-10 flex items-center justify-center border border-white/25 rounded-full text-white hover:border-[var(--gold)] transition"
           >
-            ←
+            &larr;
           </button>
 
           <button
             onClick={() => scroll("right")}
             aria-label="Scroll team right"
-            className="w-10 h-10 flex items-center justify-center
-                       border border-white/25 rounded-full text-white
-                       hover:border-[var(--gold)] transition"
+            className="w-10 h-10 flex items-center justify-center border border-white/25 rounded-full text-white hover:border-[var(--gold)] transition"
           >
-            →
+            &rarr;
           </button>
         </div>
 

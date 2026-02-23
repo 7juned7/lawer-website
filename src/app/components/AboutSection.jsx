@@ -65,7 +65,7 @@ export default function AboutSection() {
         {/* RIGHT: IMAGE */}
         <div className="relative w-full h-[440px] rounded-lg overflow-hidden">
           <Image
-            src="/Team/team.jpeg"
+            src="/team/team.jpeg"
             alt="N3&M Imperium Chambers legal practice in Delhi"
             fill
             priority={false}
