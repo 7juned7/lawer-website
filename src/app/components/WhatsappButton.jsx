@@ -7,7 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
 
 const WhatsAppButton = () => {
-  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || 7827795690;
   const [openChat, setOpenChat] = useState(false);
   const [message, setMessage] = useState("");
 

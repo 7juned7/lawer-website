@@ -1,3 +1,4 @@
+import { Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -20,21 +21,29 @@ export default function Footer() {
             </p>
 
             {/* SOCIAL LINKS */}
-            <div className="mt-6 flex gap-4">
-              {/* <a
-                href="https://www.linkedin.com/in/nazma-nazrul-65b450318"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[var(--gold)] transition"
-                aria-label="LinkedIn"
-              >
-                LinkedIn
-              </a> */}
+            <div className="mt-6 flex gap-4 justify-center">
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/nazma-nazrul-65b450318/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+    className="text-gray-400 hover:text-[var(--gold)] transition"
+  >
+    <Linkedin size={22} strokeWidth={1.5} />
+  </a>
 
-              {/* Add later if needed */}
-              {/* <a href="#" className="hover:text-[var(--gold)]">Instagram</a> */}
-              {/* <a href="#" className="hover:text-[var(--gold)]">X</a> */}
-            </div>
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/legazma?igsh=MXZsYnI4czhnOWFwNg%3D%3D"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="text-gray-400 hover:text-[var(--gold)] transition"
+  >
+    <Instagram size={22} strokeWidth={1.5} />
+  </a>
+</div>
           </div>
 
           {/* QUICK LINKS */}

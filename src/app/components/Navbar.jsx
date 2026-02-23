@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className="bg-black py-2 text-center text-xs sm:text-sm">
         <a
           href="tel:+917827795690"
-          className="text-[var(--gold)] tracking-wide hover:underline"
+          className="text-[var(--gold)]  tracking-wide hover:underline"
         >
           Call for Consultation: +91 78277 95690
         </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <a
-          href="tel:+919999999999"
+          href="tel:+917827795690"
           className="hidden md:inline-flex items-center justify-center px-6 py-3 text-sm border border-[var(--gold)] text-[var(--gold)] rounded-sm hover:bg-[var(--gold)] hover:text-black transition"
         >
           Call Now
