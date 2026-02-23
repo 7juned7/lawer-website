@@ -91,23 +91,38 @@ export default function Footer() {
 
         </div>
 
-        {/* BOTTOM BAR */}
-        <div className="mt-16 pt-8 border-t border-white/10 text-sm text-gray-400 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+       
+       {/* BOTTOM BAR */}
+<div className="mt-16 pt-8 border-t border-white/10 text-sm text-gray-400 flex flex-col items-center gap-4">
 
-          <p>
-            © {new Date().getFullYear()} N3&amp;M Imperium Chambers. All rights reserved.
-          </p>
+  <p className="text-center">
+    © {new Date().getFullYear()} N3&amp;M Imperium Chambers. All rights reserved.
+  </p>
 
-          <div className="flex gap-6">
-            <Link href="/disclaimer" className="hover:text-[var(--gold)]">
-              Legal Disclaimer
-            </Link>
-            <Link href="/privacy-policy" className="hover:text-[var(--gold)]">
-              Privacy Policy
-            </Link>
-          </div>
+  <div className="flex gap-6">
+    <Link href="/disclaimer" className="hover:text-[var(--gold)]">
+      Legal Disclaimer
+    </Link>
+    <Link href="/privacy-policy" className="hover:text-[var(--gold)]">
+      Privacy Policy
+    </Link>
+  </div>
 
-        </div>
+  {/* CENTERED CREDIT */}
+  <div className="flex items-center gap-2 text-xs text-gray-500">
+    <span>Website developed by</span>
+    <a
+      href="https://www.instagram.com/webjuncture"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-[var(--gold)] transition font-medium"
+      aria-label="WebJuncture Instagram"
+    >
+      WebJuncture
+    </a>
+  </div>
+
+</div>
 
       </div>
     </footer>
