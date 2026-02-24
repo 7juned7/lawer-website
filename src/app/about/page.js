@@ -7,36 +7,35 @@ import ProcessSection from "../components/ProcessSection";
 
 export default function AboutPage() {
   return (
-    <main className="bg-black text-white">
+    <main className="bg-[var(--bg-dark)] text-white">
 
-      {/* PAGE TITLE (simple, no hero) */}
+      {/* PAGE TITLE */}
       <section className="pt-24 pb-12">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h1 className="text-3xl md:text-4xl font-semibold">
             About{" "}
-            <span className="text-[var(--gold)]">N3&amp;M Imperium Chambers</span>
+            <span className="text-[var(--accent)]">Ezeelegal</span>
           </h1>
         </div>
       </section>
 
-      {/* INTRO (short firm overview) */}
+      {/* INTRO */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           
           <article>
-            <p className="text-lg text-gray-200 leading-relaxed">
-              <strong>N3&amp;M Imperium Chambers</strong> is a New Delhi–based law firm
-              operating from the Saket Court Complex, with a pan-India practice
-              across multiple judicial forums. With more than
-              <strong> five years of professional experience</strong>, the firm
+            <p className="text-lg text-gray-300 leading-relaxed">
+              <strong>Ezeelegal</strong> is an India-based law firm with a
+              pan-India practice across multiple judicial forums. With
+              <strong> strong professional experience</strong>, the firm
               represents businesses, entrepreneurs, investors, and individuals
               in complex legal and commercial matters.
             </p>
 
-            <p className="mt-6 text-lg text-gray-200 leading-relaxed">
+            <p className="mt-6 text-lg text-gray-300 leading-relaxed">
               Our practice spans <strong>arbitration</strong>,
-              <strong> commercial and corporate advisory</strong>, and
-              <strong> civil and criminal litigation</strong>, combining legal
+              <strong> corporate and commercial advisory</strong>, and
+              <strong> civil and commercial litigation</strong>, combining legal
               expertise with practical commercial insight.
             </p>
           </article>
@@ -44,7 +43,7 @@ export default function AboutPage() {
           <div className="relative w-full h-[420px] rounded-lg overflow-hidden">
             <Image
               src="/team/team.jpeg"
-              alt="N3&M Imperium Chambers office at Saket Court"
+              alt="Ezeelegal legal practice in India"
               fill
               className="object-cover"
             />
@@ -53,9 +52,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-     
-
-      {/* WHY N3&M */}
+      {/* WHY EZEELEGAL */}
       <WhySection />
 
       {/* AREAS OF PRACTICE */}

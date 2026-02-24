@@ -8,12 +8,19 @@
   -ms-overflow-style: none;  /* IE & Edge */
   scrollbar-width: none;     /* Firefox */
 }
-/* Brand Theme */
+
+/* Brand Theme – Ezeelegal */
 :root {
-  --bg-dark: #0b0f19;
-  --bg-light: #111827;
-  --gold: #d4af37;
-  --text-muted: #9ca3af;
+  /* Backgrounds */
+  --bg-dark: #141414;        /* Primary black */
+  --bg-light: #2B2B2B;       /* Dark gray */
+  --bg-soft: #F0F0F0;        /* Light / off-white */
+
+  /* Text colors */
+  --text-light: #FFFFFF;     /* On dark backgrounds */
+  --text-dark: #141414;      /* On light backgrounds */
+  --accent: #6F6F6F;         /* Brand gray (logo match) */
+  --text-muted: #9CA3AF;     /* Secondary text */
 }
 
 body {
@@ -21,8 +28,10 @@ body {
   color: white;
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
+
 /* Timeline animations */
 .timeline-line {
+  background-color: var(--accent);
   transform-origin: top;
   transform: scaleY(0);
   transition: transform 0.8s ease-out;
@@ -44,11 +53,13 @@ body {
 }
 
 .timeline-dot {
+  background-color: var(--bg-light);
+  border-color: var(--accent);
   transition: all 400ms ease;
 }
 
 .timeline-dot.active {
-  background-color: var(--gold);
-  color: black;
-  border-color: var(--gold);
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
 }

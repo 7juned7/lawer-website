@@ -2,78 +2,23 @@
 
 import Image from "next/image";
 
-
-
 function ArbitrationIcon() {
-  return (
-    <Image
-      src="/icons/intermediary.png"
-      alt="Arbitration icon"
-      width={60}
-      height={60}
-      priority={false}
-    />
-  );
+  return <Image src="/icons/intermediary.png" alt="Arbitration icon" width={56} height={56} />;
 }
-
 function CorporateIcon() {
-  return (
-    <Image
-      src="/icons/commercial.png"
-      alt="Arbitration icon"
-      width={60}
-      height={60}
-      priority={false}
-    />
-  );
+  return <Image src="/icons/commercial.png" alt="Corporate law icon" width={56} height={56} />;
 }
-
 function CriminalIcon() {
-  return (
-    <Image
-      src="/icons/criminal-law.png"
-      alt="Arbitration icon"
-      width={60}
-      height={60}
-      priority={false}
-    />
-  );
+  return <Image src="/icons/criminal-law.png" alt="Criminal law icon" width={56} height={56} />;
 }
-
 function CivilIcon() {
-  return (
-    <Image
-      src="/icons/civil-rights.png"
-      alt="Arbitration icon"
-      width={60}
-      height={60}
-      priority={false}
-    />
-  );
+  return <Image src="/icons/civil-rights.png" alt="Civil law icon" width={56} height={56} />;
 }
-
 function BankingIcon() {
-  return (
-    <Image
-      src="/icons/banking-law.png"
-      alt="Arbitration icon"
-      width={60}
-      height={60}
-      priority={false}
-    />
-  );
+  return <Image src="/icons/banking-law.png" alt="Banking law icon" width={56} height={56} />;
 }
-
 function FamilyIcon() {
-  return (
-    <Image
-      src="/icons/family.png"
-      alt="Arbitration icon"
-      width={60}
-      height={60}
-      priority={false}
-    />
-  );
+  return <Image src="/icons/family.png" alt="Family law icon" width={56} height={56} />;
 }
 
 /* ================= DATA ================= */
@@ -97,17 +42,17 @@ const expertiseData = [
 
 export default function ExpertiseSection() {
   return (
-    <section className="bg-gray-100 py-28" aria-labelledby="expertise-heading">
+    <section className="bg-[var(--bg-soft)] py-28" aria-labelledby="expertise-heading">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 id="expertise-heading" className="text-3xl md:text-4xl font-semibold text-black">
-            Areas of <span className="text-[var(--gold)]">Legal Expertise</span>
+          <h2 id="expertise-heading" className="text-3xl md:text-4xl font-semibold text-[var(--text-dark)]">
+            Areas of <span className="text-[var(--accent)]">Legal Expertise</span>
           </h2>
 
-          <p className="mt-6 text-base md:text-lg text-black leading-relaxed">
-            <strong>N3&amp;M Imperium Chambers</strong> provides focused legal representation across
+          <p className="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">
+            <strong>Ezeelegal</strong> provides focused legal representation across
             <strong> arbitration, corporate, civil, and criminal matters</strong> with a pan-India practice.
           </p>
         </div>
@@ -117,18 +62,19 @@ export default function ExpertiseSection() {
           {expertiseData.map((item, index) => (
             <article
               key={index}
-              className="bg-white rounded-xl p-7 min-h-[180px]
-                         shadow-md hover:shadow-xl
+              className="bg-white rounded-xl p-7 min-h-[190px]
+                         border border-black/5
+                         shadow-sm hover:shadow-lg
                          transition-all duration-300
                          flex flex-col items-center text-center"
             >
               <div className="mb-4">{item.icon}</div>
 
-              <h3 className="text-lg font-semibold text-black">
+              <h3 className="text-lg font-semibold text-[var(--text-dark)]">
                 {item.title}
               </h3>
 
-              <p className="mt-2 text-[15px] text-gray-700 leading-relaxed">
+              <p className="mt-2 text-[15px] text-gray-600 leading-relaxed">
                 {item.desc}
               </p>
 

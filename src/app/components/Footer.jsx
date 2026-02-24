@@ -1,6 +1,8 @@
 import { Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 
+const CURRENT_YEAR = 2026;
+
 export default function Footer() {
   return (
     <footer className="bg-neutral-950 text-gray-300 border-t border-white/10">
@@ -11,9 +13,7 @@ export default function Footer() {
 
           {/* BRAND */}
           <div>
-            <h3 className="text-lg font-semibold text-white">
-              N3&amp;M Imperium Chambers
-            </h3>
+            <h3 className="text-lg font-semibold text-white">Ezeelegal</h3>
             <p className="mt-4 text-sm leading-relaxed text-gray-400">
               A New Delhi–based law firm providing strategic legal representation
               across arbitration, corporate, civil, and criminal matters, with a
@@ -21,29 +21,27 @@ export default function Footer() {
             </p>
 
             {/* SOCIAL LINKS */}
-            <div className="mt-6 flex gap-4 justify-center">
-  {/* LinkedIn */}
-  <a
-    href="https://www.linkedin.com/in/nazma-nazrul-65b450318/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-    className="text-gray-400 hover:text-[var(--gold)] transition"
-  >
-    <Linkedin size={22} strokeWidth={1.5} />
-  </a>
+            <div className="mt-6 flex gap-4">
+              <a
+                href="https://www.linkedin.com/in/nazma-nazrul-65b450318/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-gray-400 hover:text-[var(--accent)] transition"
+              >
+                <Linkedin size={22} strokeWidth={1.5} />
+              </a>
 
-  {/* Instagram */}
-  <a
-    href="https://www.instagram.com/legazma?igsh=MXZsYnI4czhnOWFwNg%3D%3D"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-    className="text-gray-400 hover:text-[var(--gold)] transition"
-  >
-    <Instagram size={22} strokeWidth={1.5} />
-  </a>
-</div>
+              <a
+                href="https://www.instagram.com/legazma"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-gray-400 hover:text-[var(--accent)] transition"
+              >
+                <Instagram size={22} strokeWidth={1.5} />
+              </a>
+            </div>
           </div>
 
           {/* QUICK LINKS */}
@@ -52,10 +50,10 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="mt-4 space-y-3 text-sm">
-              <li><Link href="/about" className="hover:text-[var(--gold)]">About Us</Link></li>
-              <li><Link href="/services" className="hover:text-[var(--gold)]">Practice Areas</Link></li>
-              <li><Link href="/team" className="hover:text-[var(--gold)]">Our Team</Link></li>
-              <li><Link href="/contact" className="hover:text-[var(--gold)]">Contact</Link></li>
+              <li><Link href="/about" className="hover:text-[var(--accent)]">About Us</Link></li>
+              <li><Link href="/services" className="hover:text-[var(--accent)]">Practice Areas</Link></li>
+              <li><Link href="/team" className="hover:text-[var(--accent)]">Our Team</Link></li>
+              <li><Link href="/contact" className="hover:text-[var(--accent)]">Contact</Link></li>
             </ul>
           </div>
 
@@ -80,7 +78,7 @@ export default function Footer() {
             </h4>
             <div className="mt-4 h-[180px] rounded-lg overflow-hidden border border-white/10">
               <iframe
-                title="N3&M Imperium Chambers Location"
+                title="Ezeelegal Office Location"
                 src="https://www.google.com/maps?q=Saket%20Court%20Complex%20New%20Delhi&output=embed"
                 className="w-full h-full border-0"
                 loading="lazy"
@@ -91,38 +89,37 @@ export default function Footer() {
 
         </div>
 
-       
-       {/* BOTTOM BAR */}
-<div className="mt-16 pt-8 border-t border-white/10 text-sm text-gray-400 flex flex-col items-center gap-4">
+        {/* BOTTOM BAR */}
+        <div className="mt-16 pt-8 border-t border-white/10 text-sm text-gray-400 flex flex-col items-center gap-4">
 
-  <p className="text-center">
-    © {new Date().getFullYear()} N3&amp;M Imperium Chambers. All rights reserved.
-  </p>
+          <p className="text-center">
+            © {CURRENT_YEAR} Ezeelegal. All rights reserved.
+          </p>
 
-  <div className="flex gap-6">
-    <Link href="/disclaimer" className="hover:text-[var(--gold)]">
-      Legal Disclaimer
-    </Link>
-    <Link href="/privacy-policy" className="hover:text-[var(--gold)]">
-      Privacy Policy
-    </Link>
-  </div>
+          <div className="flex gap-6">
+            <Link href="/disclaimer" className="hover:text-[var(--accent)]">
+              Legal Disclaimer
+            </Link>
+            <Link href="/privacy-policy" className="hover:text-[var(--accent)]">
+              Privacy Policy
+            </Link>
+          </div>
 
-  {/* CENTERED CREDIT */}
-  <div className="flex items-center gap-2 text-xs text-gray-500">
-    <span>Website developed by</span>
-    <a
-      href="https://www.instagram.com/webjuncture"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="hover:text-[var(--gold)] transition font-medium"
-      aria-label="WebJuncture Instagram"
-    >
-      WebJuncture
-    </a>
-  </div>
+          {/* CREDIT */}
+          <div className="flex items-center gap-2 text-xs text-gray-500">
+            <span>Website developed by</span>
+            <a
+              href="https://www.instagram.com/webjuncture"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--accent)] transition font-medium"
+              aria-label="WebJuncture Instagram"
+            >
+              WebJuncture
+            </a>
+          </div>
 
-</div>
+        </div>
 
       </div>
     </footer>

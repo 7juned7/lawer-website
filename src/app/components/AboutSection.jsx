@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function AboutSection() {
   return (
     <section
-      className="bg-black py-28"
+      className="bg-[var(--bg-dark)] py-28"
       aria-labelledby="about-heading"
     >
       <div className="max-w-7xl mx-auto px-6 grid gap-16 md:grid-cols-2 items-center">
@@ -15,34 +15,32 @@ export default function AboutSection() {
             id="about-heading"
             className="text-3xl md:text-4xl font-semibold leading-tight text-white"
           >
-            About
-            <span className="text-[var(--gold)]">
-              {" "}N3&amp;M Imperium Chambers
+            About{" "}
+            <span className="text-[var(--accent)]">
+              Ezeelegal
             </span>
           </h2>
 
-          <p className="mt-8 text-base md:text-lg text-gray-200 leading-relaxed">
-            <strong>N3&amp;M Imperium Chambers</strong> is a forward-thinking law firm
-            based in <strong>Delhi</strong>, providing
+          <p className="mt-8 text-base md:text-lg text-gray-300 leading-relaxed">
+            <strong>Ezeelegal</strong> is a forward-thinking law firm based in
+            <strong> India</strong>, providing
             <strong> strategic and result-oriented legal solutions</strong> across
-            <strong> India</strong>. Our practice encompasses
             <strong> arbitration</strong>, <strong>commercial</strong> and
             <strong> corporate advisory</strong>, as well as
-            <strong> criminal and civil litigation</strong>.
+            <strong> civil and commercial litigation</strong>.
           </p>
 
-          <p className="mt-6 text-base md:text-lg text-gray-200 leading-relaxed">
+          <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed">
             We combine <strong>deep legal expertise</strong> with
             <strong> practical commercial insight</strong>, enabling us to deliver
             solutions that are not only <strong>legally sound</strong> but also
             aligned with our clients’ <strong>long-term objectives</strong>. Our
-            team regularly represents clients before the
-            <strong> Supreme Court of India</strong>,
-            <strong> High Courts</strong>, and
-            <strong> subordinate courts</strong>.
+            team regularly represents clients before
+            <strong> High Courts</strong> and
+            <strong> other judicial forums</strong>.
           </p>
 
-          <p className="mt-6 text-base md:text-lg text-gray-200 leading-relaxed">
+          <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed">
             Every matter entrusted to us is handled with
             <strong> meticulous preparation</strong>,
             <strong> strategic clarity</strong>, and
@@ -53,9 +51,9 @@ export default function AboutSection() {
           <div className="mt-10">
             <Link
               href="/about"
-              className="inline-block px-7 py-3 border border-[var(--gold)] text-[var(--gold)]
-                         hover:bg-[var(--gold)] hover:text-black transition
-                         text-sm tracking-wide"
+              className="inline-block px-7 py-3 border border-white text-white
+                         hover:bg-white hover:text-[var(--bg-dark)]
+                         transition text-sm tracking-wide"
             >
               Read More
             </Link>
@@ -66,13 +64,12 @@ export default function AboutSection() {
         <div className="relative w-full h-[440px] rounded-lg overflow-hidden">
           <Image
             src="/team/team.jpeg"
-            alt="N3&M Imperium Chambers legal practice in Delhi"
+            alt="Ezeelegal legal practice in India"
             fill
-            priority={false}
             className="object-cover"
           />
-          {/* subtle overlay for premium look */}
-          <div className="absolute inset-0 bg-black/10" />
+          {/* subtle overlay */}
+          <div className="absolute inset-0 bg-black/20" />
         </div>
 
       </div>

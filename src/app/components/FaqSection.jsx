@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function FAQSection() {
   const faqs = [
     {
-      q: "How do I initiate a consultation with N3&M Imperium Chambers?",
+      q: "How do I initiate a consultation with Ezeelegal?",
       a: "You may initiate contact through the website contact form or by writing to our official email address. Brief details regarding the nature of the dispute or transaction may be shared for a preliminary assessment. Submission of an inquiry does not create a lawyer–client relationship.",
     },
     {
@@ -18,11 +18,11 @@ export default function FAQSection() {
     },
     {
       q: "What areas of law does the firm practice?",
-      a: "The firm practices in arbitration, corporate and commercial law, civil and criminal litigation, banking and SARFAESI matters, matrimonial disputes, property and RERA matters, labour and employment law, environmental law, and public interest litigation.",
+      a: "The firm practices in arbitration, corporate and commercial law, civil and commercial litigation, banking and SARFAESI matters, matrimonial disputes, property and RERA matters, labour and employment law, environmental law, and public interest litigation.",
     },
     {
       q: "Do you handle matters outside Delhi?",
-      a: "Yes. While the firm is based in Delhi, we regularly represent clients before courts, tribunals, and arbitral forums across multiple jurisdictions in India.",
+      a: "Yes. While the firm is based in India, we regularly represent clients before courts, tribunals, and arbitral forums across multiple jurisdictions.",
     },
     {
       q: "Do you handle arbitration and commercial disputes?",
@@ -49,50 +49,41 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-gray-100 py-28" aria-labelledby="faq-heading">
+    <section className="bg-[var(--bg-soft)] py-28" aria-labelledby="faq-heading">
       <div className="max-w-4xl mx-auto px-6">
 
         {/* Heading */}
         <div className="mb-16 text-center">
-          <h2
-            id="faq-heading"
-            className="text-3xl md:text-4xl font-semibold text-black"
-          >
-            Frequently Asked
-            <span className="text-[var(--gold)]"> Questions</span>
+          <h2 id="faq-heading" className="text-3xl md:text-4xl font-semibold text-[var(--text-dark)]">
+            Frequently Asked <span className="text-[var(--accent)]">Questions</span>
           </h2>
 
-          <p className="mt-6 text-base md:text-lg text-gray-700 leading-relaxed">
-            The following responses address common queries regarding our
-            consultation process, areas of practice, and professional engagement.
+          <p className="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">
+            The following responses address common queries regarding our consultation process,
+            areas of practice, and professional engagement.
           </p>
         </div>
 
         {/* FAQ List */}
         <div className="space-y-4">
           {faqs.map((item, index) => (
-            <div
-              key={index}
-              className="border border-black/10 bg-white rounded-lg"
-            >
+            <div key={index} className="border border-black/10 bg-white rounded-lg">
               <button
-                onClick={() =>
-                  setOpenIndex(openIndex === index ? null : index)
-                }
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex justify-between items-center p-6 text-left"
                 aria-expanded={openIndex === index}
               >
-                <span className="text-base font-medium text-black">
+                <span className="text-base font-medium text-[var(--text-dark)]">
                   {item.q}
                 </span>
-                <span className="text-xl text-[var(--gold)]">
+                <span className="text-xl text-[var(--accent)]">
                   {openIndex === index ? "−" : "+"}
                 </span>
               </button>
 
               {openIndex === index && (
                 <div className="px-6 pb-6">
-                  <p className="text-[15px] text-gray-700 leading-relaxed">
+                  <p className="text-[15px] text-gray-600 leading-relaxed">
                     {item.a}
                   </p>
                 </div>
@@ -109,12 +100,12 @@ export default function FAQSection() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": faqs.map((f) => ({
+            mainEntity: faqs.map((f) => ({
               "@type": "Question",
-              "name": f.q,
-              "acceptedAnswer": {
+              name: f.q,
+              acceptedAnswer: {
                 "@type": "Answer",
-                "text": f.a,
+                text: f.a,
               },
             })),
           }),
