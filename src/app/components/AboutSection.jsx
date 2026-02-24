@@ -63,7 +63,7 @@ export default function AboutSection() {
         {/* RIGHT: IMAGE */}
         <div className="relative w-full h-[440px] rounded-lg overflow-hidden">
           <Image
-            src="/team/team.jpeg"
+            src="/team/supreme_court.jpeg"
             alt="Ezeelegal legal practice in India"
             fill
             className="object-cover"
