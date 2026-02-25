@@ -3,22 +3,40 @@
 import Image from "next/image";
 
 function ArbitrationIcon() {
-  return <Image src="/icons/intermediary.png" alt="Arbitration icon" width={56} height={56} />;
+  return <Image src="/icons/intermediary.png" alt=""
+  aria-hidden="true"
+  width={56}
+  height={56} />;
 }
 function CorporateIcon() {
-  return <Image src="/icons/commercial.png" alt="Corporate law icon" width={56} height={56} />;
+  return <Image src="/icons/commercial.png" alt=""
+  aria-hidden="true"
+  width={56}
+  height={56} />;
 }
 function CriminalIcon() {
-  return <Image src="/icons/criminal-law.png" alt="Criminal law icon" width={56} height={56} />;
+  return <Image src="/icons/criminal-law.png" alt=""
+  aria-hidden="true"
+  width={56}
+  height={56} />;
 }
 function CivilIcon() {
-  return <Image src="/icons/civil-rights.png" alt="Civil law icon" width={56} height={56} />;
+  return <Image src="/icons/civil-rights.png" alt=""
+  aria-hidden="true"
+  width={56}
+  height={56} />;
 }
 function BankingIcon() {
-  return <Image src="/icons/banking-law.png" alt="Banking law icon" width={56} height={56} />;
+  return <Image src="/icons/banking-law.png" alt=""
+  aria-hidden="true"
+  width={56}
+  height={56} />;
 }
 function FamilyIcon() {
-  return <Image src="/icons/family.png" alt="Family law icon" width={56} height={56} />;
+  return <Image src="/icons/family.png" alt=""
+  aria-hidden="true"
+  width={56}
+  height={56} />;
 }
 
 /* ================= DATA ================= */
@@ -61,7 +79,7 @@ export default function ExpertiseSection() {
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {expertiseData.map((item, index) => (
             <article
-              key={index}
+              key={item.title}
               className="bg-white rounded-xl p-7 min-h-[190px]
                          border border-black/5
                          shadow-sm hover:shadow-lg
@@ -71,9 +89,10 @@ export default function ExpertiseSection() {
               <div className="mb-4">{item.icon}</div>
 
               <h3 className="text-lg font-semibold text-[var(--text-dark)]">
-                {item.title}
-              </h3>
-
+  <a href="/services/arbitration" className="hover:underline">
+    {item.title}
+  </a>
+</h3>
               <p className="mt-2 text-[15px] text-gray-600 leading-relaxed">
                 {item.desc}
               </p>

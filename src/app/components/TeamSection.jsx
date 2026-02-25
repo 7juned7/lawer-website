@@ -20,7 +20,6 @@ export default function TeamSection() {
     { name: "Mr. Nadeem Khan", role: "Founder", image: "/team/nadeem.jpeg" },
     { name: "Mr. Neerav Anand", role: "Co-Founder", image: "/team/neerav.jpeg" },
     { name: "Ms. Muskan Ali", role: "Co-Founder", image: "/team/muskaan.jpeg" },
-    
     { name: "Mr. Faisal Yaseen", role: "Senior Associate", image: "/team/adv-faisal.jpeg" },
     { name: "Mr. Deepak Singh", role: "Senior Associate", image: "/team/deepak.jpeg" },
     { name: "Md. Faizan", role: "Associate", image: "/team/faizan.jpeg" },
@@ -46,15 +45,15 @@ export default function TeamSection() {
           ref={sliderRef}
           className="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide pb-6"
         >
-          {teamMembers.map((member, index) => (
+          {teamMembers.map((member) => (
             <article
-              key={index}
+              key={member.name}
               className="min-w-[260px] sm:min-w-[280px] md:min-w-[320px] snap-start rounded-xl overflow-hidden bg-[var(--bg-light)] border border-white/10 hover:shadow-xl transition"
             >
               <div className="relative h-[320px] bg-neutral-900">
                 <Image
                   src={member.image}
-                  alt={member.name}
+                  alt={`${member.name}, ${member.role} at ezeelegal`}
                   fill
                   sizes="(max-width: 768px) 100vw, 320px"
                   className="object-cover"
@@ -62,7 +61,9 @@ export default function TeamSection() {
               </div>
 
               <div className="p-6 text-center">
-                <h3 className="text-lg font-semibold text-white">{member.name}</h3>
+                <h3 className="text-lg font-semibold text-white">
+                  {member.name}
+                </h3>
                 <p className="mt-2 text-sm text-[var(--accent)] tracking-wide">
                   {member.role}
                 </p>

@@ -63,13 +63,20 @@ export default function ProcessSection() {
   ];
 
   return (
-    <section className="bg-[var(--bg-soft)] py-28">
+    <section
+      className="bg-[var(--bg-soft)] py-28"
+      aria-labelledby="process-heading"
+    >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
         <div className="max-w-3xl mx-auto mb-20 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-[var(--text-dark)]">
-            Consultation & <span className="text-[var(--accent)]">Engagement Process</span>
+          <h2
+            id="process-heading"
+            className="text-3xl md:text-4xl font-semibold text-[var(--text-dark)]"
+          >
+            Consultation &{" "}
+            <span className="text-[var(--accent)]">Engagement Process</span>
           </h2>
 
           <p className="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">
@@ -81,8 +88,6 @@ export default function ProcessSection() {
 
         {/* Timeline */}
         <div className="relative max-w-4xl mx-auto">
-
-          {/* Vertical Line */}
           <div
             ref={lineRef}
             className="absolute left-6 top-0 bottom-0 w-px bg-[var(--accent)]/60 timeline-line"
@@ -94,13 +99,13 @@ export default function ProcessSection() {
 
               return (
                 <article
-                  key={index}
+                  key={step.title}
                   data-index={index}
                   ref={(el) => (stepsRef.current[index] = el)}
                   className="relative pl-20 timeline-step"
                 >
-                  {/* Step Number */}
                   <span
+                    aria-hidden="true"
                     className={`absolute left-0 top-0 w-12 h-12 rounded-full border-2 flex items-center justify-center font-semibold timeline-dot ${
                       isActive
                         ? "active"

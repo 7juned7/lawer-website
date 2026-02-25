@@ -70,24 +70,26 @@ export default function ContactPage() {
           <div className="space-y-8 text-gray-300">
             <div>
               <h3 className="text-lg font-semibold text-white">Office Address</h3>
-              <p className="mt-2 leading-relaxed">
-                Chamber No. 225, Lawyer’s Block<br />
-                Saket Court Complex<br />
-                New Delhi, India
-              </p>
+             <address className="not-italic mt-2 leading-relaxed">
+  Chamber No. 225, Lawyer’s Block<br />
+  Saket Court Complex<br />
+  New Delhi, India
+</address>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold text-white">Contact Numbers</h3>
-              <p className="mt-2">
-                +91 78277 95690<br />
-                +91 96545 67373
-              </p>
+             <p className="mt-2">
+  <a href="tel:+917827795690">+91 78277 95690</a><br />
+  <a href="tel:+919654567373">+91 96545 67373</a>
+</p>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold text-white">Email</h3>
-              <p className="mt-2">ezeelegal05@gmail.com</p>
+             <p className="mt-2">
+  <a href="mailto:ezeelegal05@gmail.com">ezeelegal05@gmail.com</a>
+</p>
             </div>
           </div>
 

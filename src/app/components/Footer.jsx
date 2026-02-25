@@ -1,7 +1,7 @@
 import { Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 
-const CURRENT_YEAR = 2026;
+const CURRENT_YEAR = new Date().getFullYear();
 
 export default function Footer() {
   return (
@@ -14,11 +14,11 @@ export default function Footer() {
           {/* BRAND */}
           <div>
             <h3 className="text-lg font-semibold text-white">ezeelegal</h3>
-            <p className="mt-4 text-sm leading-relaxed text-gray-400">
-              A New Delhi–based law firm providing strategic legal representation
-              across arbitration, corporate, civil, and criminal matters, with a
-              pan-India practice.
-            </p>
+           <address className="mt-4 text-sm leading-relaxed text-gray-400 not-italic">
+  A New Delhi–based law firm providing strategic legal representation
+  across arbitration, corporate, civil, and criminal matters, with a
+  pan-India practice.
+</address>
 
             {/* SOCIAL LINKS */}
             <div className="mt-6 flex gap-4">
@@ -109,14 +109,17 @@ export default function Footer() {
           <div className="flex items-center gap-2 text-xs text-gray-500">
             <span>Website developed by</span>
             <a
-              href="https://www.instagram.com/webjuncture"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[var(--accent)] transition font-medium"
-              aria-label="WebJuncture Instagram"
-            >
-              WebJuncture
-            </a>
+  href="https://www.webjuncture.in"
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  className="hover:text-[var(--accent)] transition font-medium"
+  aria-label="WebJuncture Web Development Agency"
+>
+  WebJuncture
+</a>
+<span className="sr-only">
+  WebJuncture is a web development and SEO agency in India
+</span>
           </div>
 
         </div>

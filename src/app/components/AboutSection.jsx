@@ -25,8 +25,8 @@ export default function AboutSection() {
             <strong>ezeelegal</strong> is a forward-thinking law firm based in
             <strong> India</strong>, providing
             <strong> strategic and result-oriented legal solutions</strong> across
-            <strong> arbitration</strong>, <strong>commercial</strong> and
-            <strong> corporate advisory</strong>, as well as
+            <strong> arbitration</strong>, <strong>corporate</strong> and
+            <strong> commercial advisory</strong>, as well as
             <strong> civil and commercial litigation</strong>.
           </p>
 
@@ -35,9 +35,10 @@ export default function AboutSection() {
             <strong> practical commercial insight</strong>, enabling us to deliver
             solutions that are not only <strong>legally sound</strong> but also
             aligned with our clients’ <strong>long-term objectives</strong>. Our
-            team regularly represents clients before <strong> Supreme Court</strong>,
-            <strong> High Court</strong>,<strong> Tribunals</strong> and
+            team regularly represents clients before
+            <span><strong> Supreme Court</strong>,  <strong> High Court</strong>,<strong> Tribunals</strong> and
             <strong> all other district courts of Delhi</strong>.
+            </span>
           </p>
 
           <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed">
@@ -62,12 +63,13 @@ export default function AboutSection() {
 
         {/* RIGHT: IMAGE */}
         <div className="relative w-full h-[440px] rounded-lg overflow-hidden">
-          <Image
-            src="/team/supreme_court.jpeg"
-            alt="ezeelegal legal practice in India"
-            fill
-            className="object-cover"
-          />
+         <Image
+  src="/team/supreme_court.jpeg"
+  alt="ezeelegal law firm representing clients before Supreme Court and High Courts in India"
+  fill
+  priority
+  className="object-cover"
+/>
           {/* subtle overlay */}
           <div className="absolute inset-0 bg-black/20" />
         </div>
