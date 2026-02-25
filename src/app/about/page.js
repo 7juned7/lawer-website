@@ -20,11 +20,11 @@ export const metadata = {
     title: "About ezeelegal",
     description:
       "ezeelegal is a professional law firm in India offering strategic legal solutions across arbitration, corporate advisory, and litigation matters.",
-    url: "https://www.ezeelegal.com/about",
+    url: "https://www.ezeelegal.in/about",
     siteName: "ezeelegal",
     images: [
       {
-        url: "/og-about.jpg", // optional (can add later)
+        url: "/og.jpeg", // optional (can add later)
         width: 1200,
         height: 630,
         alt: "About ezeelegal Law Firm",
@@ -40,7 +40,65 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="bg-[var(--bg-dark)] text-white">
-
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.ezeelegal.in/#organization",
+          "name": "ezeelegal",
+          "url": "https://www.ezeelegal.in",
+          "logo": "https://www.ezeelegal.in/logo.png",
+          "description":
+            "ezeelegal is an India-based law firm providing strategic legal representation across arbitration, corporate advisory, and commercial litigation.",
+          "sameAs": [
+            "https://www.linkedin.com/",
+            "https://twitter.com/"
+          ]
+        },
+        {
+          "@type": "LegalService",
+          "@id": "https://www.ezeelegal.in/#legalservice",
+          "name": "ezeelegal Law Firm",
+          "url": "https://www.ezeelegal.in/about",
+          "provider": {
+            "@id": "https://www.ezeelegal.in/#organization"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "serviceType": [
+            "Arbitration",
+            "Corporate Advisory",
+            "Commercial Litigation",
+            "Civil Litigation"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.ezeelegal.in"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About",
+              "item": "https://www.ezeelegal.in/about"
+            }
+          ]
+        }
+      ]
+    }),
+  }}
+/>
       {/* PAGE TITLE */}
       <section className="pt-24 pb-12">
         <div className="max-w-5xl mx-auto px-6 text-center">
@@ -74,7 +132,7 @@ export default function AboutPage() {
 
           <div className="relative w-full h-[420px] rounded-lg overflow-hidden">
             <Image
-              src="/team/team.jpeg"
+              src="/team/supreme_court.jpeg"
               alt="ezeelegal legal practice in India"
               fill
               className="object-cover"

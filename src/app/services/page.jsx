@@ -13,13 +13,24 @@ export const metadata = {
     "commercial litigation",
     "legal services India",
   ],
+  alternates: {
+    canonical: "https://www.ezeelegal.in/services",
+  },
   openGraph: {
     title: "Practice Areas | ezeelegal",
     description:
       "ezeelegal offers focused legal representation across arbitration, corporate and commercial law, and litigation matters throughout India.",
-    url: "https://www.ezeelegal.com/services",
+    url: "https://www.ezeelegal.in/services",
     siteName: "ezeelegal",
     type: "website",
+    images: [
+      {
+        url: "https://www.ezeelegal.in/og.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "ezeelegal Practice Areas",
+      },
+    ],
   },
   robots: {
     index: true,
