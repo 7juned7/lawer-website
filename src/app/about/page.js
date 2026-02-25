@@ -4,7 +4,39 @@ import ExpertiseSection from "../components/ExpertiseSection";
 import WhySection from "../components/WhySection";
 import TeamSection from "../components/TeamSection";
 import ProcessSection from "../components/ProcessSection";
-
+export const metadata = {
+  title: "About Us | ezeelegal",
+  description:
+    "Learn about ezeelegal, an India-based law firm providing strategic legal representation across arbitration, corporate and commercial advisory, and civil and commercial litigation with a pan-India practice.",
+  keywords: [
+    "ezeelegal",
+    "law firm in India",
+    "corporate law firm",
+    "arbitration lawyers",
+    "commercial litigation",
+    "legal advisory India",
+  ],
+  openGraph: {
+    title: "About ezeelegal",
+    description:
+      "ezeelegal is a professional law firm in India offering strategic legal solutions across arbitration, corporate advisory, and litigation matters.",
+    url: "https://www.ezeelegal.com/about",
+    siteName: "ezeelegal",
+    images: [
+      {
+        url: "/og-about.jpg", // optional (can add later)
+        width: 1200,
+        height: 630,
+        alt: "About ezeelegal Law Firm",
+      },
+    ],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 export default function AboutPage() {
   return (
     <main className="bg-[var(--bg-dark)] text-white">
@@ -14,7 +46,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h1 className="text-3xl md:text-4xl font-semibold">
             About{" "}
-            <span className="text-[var(--accent)]">Ezeelegal</span>
+            <span className="text-[var(--accent)]">ezeelegal</span>
           </h1>
         </div>
       </section>
@@ -25,7 +57,7 @@ export default function AboutPage() {
           
           <article>
             <p className="text-lg text-gray-300 leading-relaxed">
-              <strong>Ezeelegal</strong> is an India-based law firm with a
+              <strong>ezeelegal</strong> is an India-based law firm with a
               pan-India practice across multiple judicial forums. With
               <strong> strong professional experience</strong>, the firm
               represents businesses, entrepreneurs, investors, and individuals
@@ -43,7 +75,7 @@ export default function AboutPage() {
           <div className="relative w-full h-[420px] rounded-lg overflow-hidden">
             <Image
               src="/team/team.jpeg"
-              alt="Ezeelegal legal practice in India"
+              alt="ezeelegal legal practice in India"
               fill
               className="object-cover"
             />
@@ -52,7 +84,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* WHY EZEELEGAL */}
+      {/* WHY ezeelegal */}
       <WhySection />
 
       {/* AREAS OF PRACTICE */}

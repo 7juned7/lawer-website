@@ -73,7 +73,7 @@ export default function ProcessSection() {
           </h2>
 
           <p className="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">
-            At <strong>Ezeelegal</strong>, we follow a{" "}
+            At <strong>ezeelegal</strong>, we follow a{" "}
             <strong>structured, transparent, and confidential process</strong>{" "}
             to ensure clarity and strategic direction from the first interaction.
           </p>

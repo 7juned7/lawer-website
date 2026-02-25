@@ -1,4 +1,4 @@
-import { MailerSend, EmailParams, Sender, Recipient } from "mailersend";
+import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
@@ -11,55 +11,46 @@ export async function POST(req) {
       );
     }
 
-    const mailerSend = new MailerSend({
-      apiKey: process.env.MAILERSEND_API_KEY,
+    // Brevo SMTP transporter
+    const transporter = nodemailer.createTransport({
+      host: "smtp-relay.brevo.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: process.env.BREVO_SMTP_USER,
+        pass: process.env.BREVO_SMTP_PASS,
+      },
     });
 
-    // FROM: MailerSend test domain
-    const sentFrom = new Sender(
-      process.env.CONTACT_FROM_EMAIL,
-      "N3&M Imperium Chambers"
-    );
-
-    // TO: your test inbox (7juned7)
-    const recipients = [
-      new Recipient(process.env.CONTACT_TO_EMAIL, "Juned"),
-    ];
-
-    const emailParams = new EmailParams()
-      .setFrom(sentFrom)
-      .setTo(recipients)
-      .setSubject("Test Inquiry – N3&M Imperium Chambers")
-      .setReplyTo([
-  {
-    email: email,
-    name: name,
-  },
-]) // ✅ ONLY email (no name)
-      .setText(`
-New inquiry received via website:
-
-Name: ${name}
-Email: ${email}
-Phone: ${phone || "Not provided"}
-
-Message:
-${message}
-      `);
-
-    await mailerSend.email.send(emailParams);
+    // Send lead to client
+    await transporter.sendMail({
+      from: `"Ezee Legal" <ezeelegal05@gmail.com>`,
+      to: process.env.CONTACT_TO_EMAIL,
+      replyTo: email,
+      subject: "New Enquiry – Ezee Legal",
+      html: `
+        <h3>New enquiry received via website</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
+        <p><strong>Message:</strong><br/>${message}</p>
+        <hr/>
+        <p><small>Source: ezeelegal.in contact form</small></p>
+      `,
+    });
 
     return new Response(
       JSON.stringify({ success: true }),
       { status: 200 }
     );
+
   } catch (error) {
-    console.error("MailerSend Error:", error);
+    console.error("Brevo Email Error:", error);
 
     return new Response(
       JSON.stringify({
         success: false,
-        error: error.message || "MailerSend failed",
+        error: "Email sending failed",
       }),
       { status: 500 }
     );

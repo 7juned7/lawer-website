@@ -17,12 +17,12 @@ export default function AboutSection() {
           >
             About{" "}
             <span className="text-[var(--accent)]">
-              Ezeelegal
+              ezeelegal
             </span>
           </h2>
 
           <p className="mt-8 text-base md:text-lg text-gray-300 leading-relaxed">
-            <strong>Ezeelegal</strong> is a forward-thinking law firm based in
+            <strong>ezeelegal</strong> is a forward-thinking law firm based in
             <strong> India</strong>, providing
             <strong> strategic and result-oriented legal solutions</strong> across
             <strong> arbitration</strong>, <strong>commercial</strong> and
@@ -35,9 +35,9 @@ export default function AboutSection() {
             <strong> practical commercial insight</strong>, enabling us to deliver
             solutions that are not only <strong>legally sound</strong> but also
             aligned with our clients’ <strong>long-term objectives</strong>. Our
-            team regularly represents clients before
-            <strong> High Courts</strong> and
-            <strong> other judicial forums</strong>.
+            team regularly represents clients before <strong> Supreme Court</strong>,
+            <strong> High Court</strong>,<strong> Tribunals</strong> and
+            <strong> all other district courts of Delhi</strong>.
           </p>
 
           <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed">
@@ -64,7 +64,7 @@ export default function AboutSection() {
         <div className="relative w-full h-[440px] rounded-lg overflow-hidden">
           <Image
             src="/team/supreme_court.jpeg"
-            alt="Ezeelegal legal practice in India"
+            alt="ezeelegal legal practice in India"
             fill
             className="object-cover"
           />

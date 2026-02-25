@@ -6,7 +6,7 @@ export default function WhySection() {
         {/* Heading */}
         <div className="max-w-3xl mx-auto mb-20 text-center">
           <h2 id="why-heading" className="text-3xl md:text-4xl font-semibold text-[var(--text-dark)]">
-            Why <span className="text-[var(--accent)]">Ezeelegal</span>
+            Why <span className="text-[var(--accent)]">ezeelegal</span>
           </h2>
 
           <p className="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">

@@ -13,7 +13,7 @@ export default function Footer() {
 
           {/* BRAND */}
           <div>
-            <h3 className="text-lg font-semibold text-white">Ezeelegal</h3>
+            <h3 className="text-lg font-semibold text-white">ezeelegal</h3>
             <p className="mt-4 text-sm leading-relaxed text-gray-400">
               A New Delhi–based law firm providing strategic legal representation
               across arbitration, corporate, civil, and criminal matters, with a
@@ -78,7 +78,7 @@ export default function Footer() {
             </h4>
             <div className="mt-4 h-[180px] rounded-lg overflow-hidden border border-white/10">
               <iframe
-                title="Ezeelegal Office Location"
+                title="ezeelegal Office Location"
                 src="https://www.google.com/maps?q=Saket%20Court%20Complex%20New%20Delhi&output=embed"
                 className="w-full h-full border-0"
                 loading="lazy"
@@ -93,7 +93,7 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-white/10 text-sm text-gray-400 flex flex-col items-center gap-4">
 
           <p className="text-center">
-            © {CURRENT_YEAR} Ezeelegal. All rights reserved.
+            © {CURRENT_YEAR} ezeelegal. All rights reserved.
           </p>
 
           <div className="flex gap-6">

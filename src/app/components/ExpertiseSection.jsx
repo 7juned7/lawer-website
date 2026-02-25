@@ -52,7 +52,7 @@ export default function ExpertiseSection() {
           </h2>
 
           <p className="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">
-            <strong>Ezeelegal</strong> provides focused legal representation across
+            <strong>ezeelegal</strong> provides focused legal representation across
             <strong> arbitration, corporate, civil, and criminal matters</strong> with a pan-India practice.
           </p>
         </div>

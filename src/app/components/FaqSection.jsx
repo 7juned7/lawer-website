@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function FAQSection() {
   const faqs = [
     {
-      q: "How do I initiate a consultation with Ezeelegal?",
+      q: "How do I initiate a consultation with ezeelegal?",
       a: "You may initiate contact through the website contact form or by writing to our official email address. Brief details regarding the nature of the dispute or transaction may be shared for a preliminary assessment. Submission of an inquiry does not create a lawyer–client relationship.",
     },
     {

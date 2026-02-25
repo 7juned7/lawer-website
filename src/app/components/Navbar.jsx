@@ -27,7 +27,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center focus:outline-none">
           <Image
             src="/logo.png"
-            alt="Ezeelegal – Litigation and Corporate Advisory"
+            alt="ezeelegal – Litigation and Corporate Advisory"
             width={400}
             height={400}
             priority

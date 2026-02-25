@@ -1,6 +1,31 @@
 import ExpertiseSection from "../components/ExpertiseSection";
 import ProcessSection from "../components/ProcessSection";
-
+export const metadata = {
+  title: "Practice Areas | ezeelegal",
+  description:
+    "Explore the practice areas of ezeelegal, an India-based law firm providing legal services across arbitration, corporate and commercial advisory, and civil and criminal litigation with a pan-India practice.",
+  keywords: [
+    "ezeelegal",
+    "practice areas",
+    "law firm in India",
+    "arbitration lawyers",
+    "corporate law",
+    "commercial litigation",
+    "legal services India",
+  ],
+  openGraph: {
+    title: "Practice Areas | ezeelegal",
+    description:
+      "ezeelegal offers focused legal representation across arbitration, corporate and commercial law, and litigation matters throughout India.",
+    url: "https://www.ezeelegal.com/services",
+    siteName: "ezeelegal",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 export default function ServicesPage() {
   return (
     <main className="bg-black text-white">

@@ -55,7 +55,7 @@ export default function ContactPage() {
         {/* Heading */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h1 id="contact-heading" className="text-3xl md:text-4xl font-semibold">
-            Contact <span className="text-[var(--accent)]">Ezeelegal</span>
+            Contact <span className="text-[var(--accent)]">ezeelegal</span>
           </h1>
 
           <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed">
@@ -87,7 +87,7 @@ export default function ContactPage() {
 
             <div>
               <h3 className="text-lg font-semibold text-white">Email</h3>
-              <p className="mt-2">imperiumn3m@gmail.com</p>
+              <p className="mt-2">ezeelegal05@gmail.com</p>
             </div>
           </div>
 

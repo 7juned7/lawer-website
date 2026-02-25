@@ -1,23 +1,23 @@
 export const metadata = {
-  title: "Privacy Policy | N3&M Imperium Chambers",
+  title: "Privacy Policy | ezeelegal",
   description:
-    "Privacy policy describing data collection and usage by N3&M Imperium Chambers.",
+    "Privacy policy describing data collection, usage, and confidentiality practices followed by ezeelegal.",
 };
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="bg-black text-white">
+    <main className="bg-[var(--bg-dark)] text-white">
       <section className="pt-24 pb-20">
         <div className="max-w-4xl mx-auto px-6">
 
           <h1 className="text-3xl md:text-4xl font-semibold mb-8">
-            Privacy <span className="text-[var(--gold)]">Policy</span>
+            Privacy <span className="text-[var(--accent)]">Policy</span>
           </h1>
 
           <div className="space-y-6 text-gray-300 text-sm leading-relaxed">
 
             <p>
-              N3&amp;M Imperium Chambers is committed to protecting the privacy and
+              <strong>ezeelegal</strong> is committed to protecting the privacy and
               confidentiality of visitors to this website.
             </p>
 
@@ -63,7 +63,7 @@ export default function PrivacyPolicyPage() {
               responsible for the privacy practices of such websites.
             </p>
 
-            {/* ✅ GOOGLE ANALYTICS SECTION */}
+            {/* GOOGLE ANALYTICS */}
             <h2 className="text-lg font-semibold text-white">
               Analytics and Cookies
             </h2>

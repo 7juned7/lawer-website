@@ -23,12 +23,12 @@ export default function HeroSection() {
               Strategic Legal Solutions
               <br />
               <span className="text-[var(--accent)]">
-                Ezeelegal
+                ezeelegal
               </span>
             </h1>
 
             <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed">
-              Ezeelegal is a forward-thinking law firm based in India, offering
+              ezeelegal is a forward-thinking law firm based in India, offering
               strategic and result-oriented legal representation across arbitration,
               commercial, corporate, and litigation matters.
             </p>
