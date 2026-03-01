@@ -33,7 +33,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://www.instagram.com/legazma"
+                href="https://www.instagram.com/ezeelegal/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"

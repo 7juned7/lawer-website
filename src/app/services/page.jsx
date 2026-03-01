@@ -49,7 +49,7 @@ export default function ServicesPage() {
             <span className="text-[var(--gold)]">Areas</span>
           </h1>
           <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
-            N3&amp;M Imperium Chambers provides focused legal representation across
+            ezeelegal provides focused legal representation across
             arbitration, corporate, commercial, civil, and criminal matters,
             with a pan-India practice.
           </p>
