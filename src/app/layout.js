@@ -41,6 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        
         {/* Google Analytics */}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
@@ -61,7 +62,7 @@ export default function RootLayout({ children }) {
           </>
         )}
       </head>
-
+<meta name="google-site-verification" content="tPjmzhxNN1SgySjz0rgBt9pzLOUKx2LB6wysSH0_y20" />
       <body>
         <Navbar />
   
