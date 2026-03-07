@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsappButton";
 import Script from "next/script";
-import AnalyticsTracker from "./components/AnalyticsTracker";
+
 
 export const metadata = {
   title: {
@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
 
       <body>
         <Navbar />
-        <AnalyticsTracker />
+  
         {children}
         <Footer />
         <WhatsAppButton />
